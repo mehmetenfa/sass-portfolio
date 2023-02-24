@@ -1,5 +1,8 @@
 import React from "react";
-import sideImg from "../../images/side.jpg ";
+import sideImg from "../../images/side.jpg";
+import { side, socialIcon } from '../../data/data'
+import { FiDownloadCloud } from 'react-icons/fi'
+import { RiMoneyDollarCircleLine } from 'react-icons/ri'
 
 export const SideContent = () => {
   return (
@@ -32,6 +35,19 @@ export const SideContent = () => {
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="sideContent_bottom_buttonGroup">
+            <button className="sm_button">
+                <span>
+                    <FiDownloadCloud className='button_bicon' />
+                </span>
+            </button>
+            <button className="sm_button">
+                <span>
+                    <RiMoneyDollarCircleLine className='button_bicon' />
+                </span>
+            </button>
           </div>
         </div>
       </section>
