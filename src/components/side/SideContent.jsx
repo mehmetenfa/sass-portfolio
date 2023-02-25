@@ -1,8 +1,28 @@
 import React from "react";
 import sideImg from "../../images/side.jpg";
-import { side, socialIcon } from '../../data/data'
-import { FiDownloadCloud } from 'react-icons/fi'
-import { RiMoneyDollarCircleLine } from 'react-icons/ri'
+import { side, socialIcon } from "../../data/data";
+import { FiDownloadCloud } from "react-icons/fi";
+import { RiMoneyDollarCircleLine } from "react-icons/ri";
+
+const Progress = ({ done, title, back }) => {
+  return (
+    <div className="progress">
+      <div
+        className={`progress_done ${back}`}
+        style={{
+          opacity: 1,
+          width: `${done}%`,
+        }}
+      ></div>
+      <div className="progress_num">
+        <h4>{done}.</h4>
+      </div>
+      <div className="progress_title">
+        <h3> {title}</h3>
+      </div>
+    </div>
+  );
+};
 
 export const SideContent = () => {
   return (
@@ -39,14 +59,13 @@ export const SideContent = () => {
 
           <div className="sideContent_bottom_buttonGroup">
             <button className="sm_button">
-                <span>
-                    <FiDownloadCloud className='button_bicon' />
-                </span>
+              <span>
+                <FiDownloadCloud className="button_bicon" />
+              </span>
             </button>
             <button className="sm_button">
-                <span>
-                    <RiMoneyDollarCircleLine className='button_bicon' />
-                </span>
+              <RiMoneyDollarCircleLine className="button_bicon" />
+              <span>HIRE ME </span>
             </button>
           </div>
         </div>
