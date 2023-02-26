@@ -1,0 +1,13 @@
+.sideContent {
+  position: relative;
+  &_top {
+    position: relative;
+    &_img {
+      position: relative;
+      width: 100%;
+      &::before {
+        content: "";
+      }
+    }
+  }
+}
