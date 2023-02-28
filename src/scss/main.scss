@@ -20,3 +20,9 @@ ul,
 button {
     @include defaultValue;
 }
+
+.main-div {
+    width: $w-4xl;
+    margin: auto;
+    @include flex()
+}
