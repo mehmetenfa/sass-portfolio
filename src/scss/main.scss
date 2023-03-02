@@ -66,10 +66,22 @@ $backgrouds: (
 }
 
 .button {
-  @include button($indigo, map-get($sizes, 2xl), map-get($sizes, sm), map-get($sizes, sm), $primary);
+  @include button(
+    $indigo,
+    map-get($sizes, 2xl),
+    map-get($sizes, sm),
+    map-get($sizes, sm),
+    $primary
+  );
 }
 .sm_button {
-  @include button($primary, map-get($sizes, sm), map-get($sizes, sm), map-get($sizes, sm), $indigo);
+  @include button(
+    $primary,
+    map-get($sizes, sm),
+    map-get($sizes, sm),
+    map-get($sizes, sm),
+    $indigo
+  );
   span {
     margin: 0;
   }
