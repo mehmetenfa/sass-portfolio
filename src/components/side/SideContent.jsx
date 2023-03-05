@@ -1,8 +1,8 @@
 import React from "react";
-import sideImg from "../../images/side.jpg";
 import { side, socialIcon } from "../../data/data";
-import { FiDownloadCloud } from "react-icons/fi";
+import sideImg from "../../images/side.jpg";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
+import { FiDownloadCloud } from "react-icons/fi";
 
 const Progress = ({ done, title, back }) => {
   return (
@@ -28,9 +28,9 @@ export const SideContent = () => {
   return (
     <>
       <section className="sideContent">
-        <div className="sideContent_Top">
+        <div className="sideContent_top">
           <div className="sideContent_top_img">
-            <img src={sideImg} alt="" />
+            <img src={sideImg} alt="side" width="100%" />
             <div className="sideContent_top_img_name">
               <h3>Linda M. Bellamy</h3>
               <span>Sr. Developer</span>
@@ -43,18 +43,14 @@ export const SideContent = () => {
               </div>
             ))}
           </div>
-          <div className="sideContent_bottom">
-            <div className="sideContent_bottom_skils">
-              {side.map((item) => (
-                <div className="sideContent_skill_box">
-                  <Progress
-                    title={item.text}
-                    done={item.num}
-                    back={item.class}
-                  />
-                </div>
-              ))}
-            </div>
+        </div>
+        <div className="sideContent_bottom">
+          <div className="sideContent_bottom_skill">
+            {side.map((item) => (
+              <div className="sideContent_skill_box">
+                <Progress title={item.text} done={item.num} back={item.class} />
+              </div>
+            ))}
           </div>
 
           <div className="sideContent_bottom_buttonGroup">
@@ -63,9 +59,9 @@ export const SideContent = () => {
                 <FiDownloadCloud className="button_bicon" />
               </span>
             </button>
-            <button className="sm_button">
+            <button className="button">
               <RiMoneyDollarCircleLine className="button_bicon" />
-              <span>HIRE ME </span>
+              <span>HIRE ME</span>
             </button>
           </div>
         </div>
